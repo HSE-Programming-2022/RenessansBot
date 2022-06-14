@@ -126,6 +126,24 @@ namespace TelegramBotRenessans
                         + Environment.NewLine + "/contacts - контакты" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
                     return;
                 }
+                else if (message.Text.ToLower() == "/education")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Зайдите на корпоративный портал intranet.rencredit.ru с рабочего аккаунта, в основном меню откройте вкладку «Банк для Вас», выберете пункт «PROРазвитие»"
+                    + Environment.NewLine + " " + Environment.NewLine + "/information - найти информацию" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/technical_support")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Зайдите на корпоративный портал intranet.rencredit.ru с рабочего аккаунта, в правом верхнем углу выберите «🔧», подайте заявку через каталог стандартных обращений (слева в меню) или нестандартный запрос. " + Environment.NewLine + " Также вы можете позвонить в help desk по добавочному номеру «11111»."
+                    + Environment.NewLine + " " + Environment.NewLine + "/contacts - контакты" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/send_external_documents")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Отправьте ваш запрос на рассылку #mailroom@rencredit.ru" + Environment.NewLine + " "
+                    + Environment.NewLine + "/how_to - как сделать" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
             }
         }
 
