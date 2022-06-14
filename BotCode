@@ -102,6 +102,30 @@ namespace TelegramBotRenessans
                     + Environment.NewLine + " " + Environment.NewLine + "/issue - оформление" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
                     return;
                 }
+                else if (message.Text.ToLower() == "/bank_information")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Зайдите на корпоративный портал intranet.rencredit.ru с рабочего аккаунта, в основном меню откройте вкладку «О компании»."
+                        + Environment.NewLine + " " + Environment.NewLine + "/information - найти информацию" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/salary_card")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Контактное лицо по вопросам зарплатных карт - Рашитова Тамара: trashitova@rencredit.ru/добавочный номер: 11277 "
+                        + Environment.NewLine + " " +Environment.NewLine + "/contacts - контакты" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/autosignature_corporate_mail")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Зайдите на корпоративный портал intranet.rencredit.ru с рабочего аккаунта, в основном меню откройте вкладку «О компании»."
+                        + Environment.NewLine + " " + Environment.NewLine + "/how_to - как сделать" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/bank_phone_number")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "+7 (495) 783 46 00" + Environment.NewLine + " "
+                        + Environment.NewLine + "/contacts - контакты" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
             }
         }
 
