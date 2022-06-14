@@ -66,6 +66,24 @@ namespace TelegramBotRenessans
                         + Environment.NewLine + " " + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
                     return;
                 }
+                else if (message.Text.ToLower() == "/nets")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "https://t.me/ren_credit - официальный канал банка «Ренессанс Кредит» " + Environment.NewLine + " https://t.me/prorenpeople - карьера в банке «Ренессанс Кредит» " + Environment.NewLine + " https://vk.com/jobrencredit - карьера в банке «Ренессанс Кредит» " + Environment.NewLine + " https://vk.com/renaissancecredit - официальная страница " + Environment.NewLine + " https://t.me/rencredit_invest - канал об инвестициях «Ренессанс Кредит» "
+                    + Environment.NewLine + " " + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/food")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "На каждом этаже есть оборудованная кухня с посудой, холодильником и микроволновкой. На кухне всегда есть: чай/кофе/вода. " + Environment.NewLine + " БЦ Двинцев: 1 этаж - КОФЕПОРТ, Prime, Ванильное небо, столовая " + Environment.NewLine + " БЦ Москва Сити, башня Город столиц: -1 этаж – Эник и Беник, Soul in the Bowl, SeDelice, Co, Пловокация " + Environment.NewLine + " 1 этаж – Tutto Bene, Хлеб Насущный, Зеленая точка, ДаблБи, Misha Fisher In Asia, Remy Kitchen Bakery, КОФЕПОРТ, Buba и др. " + Environment.NewLine + " Кожевническая 14: в здании на цокольном этаже - Просто столовая.Напротив на Летниковской, 2 – Torro Grill, Бостон, Хлеб Насущный, Prime"
+                    + Environment.NewLine + " " + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/colleagues_contacts")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Зайдите на корпоративный портал intranet.rencredit.ru с рабочего аккаунта и в поисковой строке введите фамилию или адрес электронной почты сотрудника.\n В карточке сотрудника можно посмотреть его должность, подразделение, в котором он работает, структуру подчинения, день рождения, этаж или номер рабочего места."
+                    + Environment.NewLine + " " + Environment.NewLine + "/contacts - контакты" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
             }
         }
 
