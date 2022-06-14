@@ -84,6 +84,24 @@ namespace TelegramBotRenessans
                     + Environment.NewLine + " " + Environment.NewLine + "/contacts - контакты" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
                     return;
                 }
+                else if (message.Text.ToLower() == "/temporary_pass")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Отправьте заявку на #propusk@rencredit.ru. \n Шаблон заявки можно найти на корпоративном портале intranet.rencredit.ru во вкладке основного меню «В один клик», выбрать пункт «Оформление пропуска»."
+                    + Environment.NewLine + " " + Environment.NewLine + "/issue - оформление" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/hospitals")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Если вы заболели, обязательно предупредите руководителя. Больничный лист необходимо прислать на рассылку #Absence@rencredit.ru"
+                    + Environment.NewLine + " " + Environment.NewLine + "/issue - оформление" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/holidays")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Ответ: Зайдите на корпоративный портал intranet.rencredit.ru с рабочего аккаунта и в верхнем правом углу перейдите на значок «🏝». Вы увидите какое количество дней Вам доступно для отпуска. Необходимо нажать на кнопку «Подать заявку». " + Environment.NewLine + " Если возникнут трудности - связывайтесь с Еленой Царевой: etsareva@rencredit.ru/добавочный номер: 11265 "
+                    + Environment.NewLine + " " + Environment.NewLine + "/issue - оформление" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
             }
         }
 
