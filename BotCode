@@ -144,6 +144,18 @@ namespace TelegramBotRenessans
                     + Environment.NewLine + "/how_to - как сделать" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
                     return;
                 }
+                 else if (message.Text.ToLower() == "/dms")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Зайдите на корпоративный портал intranet.rencredit.ru с рабочего аккаунта, перейдите в личный профиль и выберите вкладку “ДМС и НС”"
+                        + Environment.NewLine + " " + Environment.NewLine + "/information - найти информацию" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/2ndfl")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Напишите на рассылку #payrollaccounting@rencredit.ru с уточнением ФИО и периода"
+                        + Environment.NewLine + " " + Environment.NewLine + "/information - найти информацию" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
             }
         }
 
