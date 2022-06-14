@@ -156,6 +156,24 @@ namespace TelegramBotRenessans
                         + Environment.NewLine + " " + Environment.NewLine + "/information - найти информацию" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
                     return;
                 }
+                else if (message.Text.ToLower() == "/taxi_courier")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Отправьте заявку на #reception@rencredit.ru." + Environment.NewLine + " Шаблон заявки можно найти на корпоративном портале intranet.rencredit.ru во вкладке основного меню «В один клик», выбрать пункт «Заказ такси, курьера»"
+                    + Environment.NewLine + " " + Environment.NewLine + "/how_to - как сделать" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/special_offers")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Зайдите на корпоративный портал intranet.rencredit.ru с рабочего аккаунта и в основном меню выберите раздел «Банк для Вас», далее перейдите в «PROСкидки». " + Environment.NewLine + " Также у нас есть специальные предложения по банковским продуктам, с ними можно ознакомиться в разделе основного меню «Продукты для сотрудников»"
+                    + Environment.NewLine + " " + Environment.NewLine + "/information - найти информацию" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/reception")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Доб. 14624 - Ресепшн Сити " + Environment.NewLine + " Доб. 14611 - Ресепшн Двинцев"
+                    + Environment.NewLine + " " + Environment.NewLine + "/contacts - контакты" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
             }
         }
 
