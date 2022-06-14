@@ -20,7 +20,50 @@ namespace TelegramBotRenessans
                 var message = update.Message;
                 if (message.Text.ToLower() == "/start") //здесь проверяется текст сообщения
                 {
-                    await botClient.SendTextMessageAsync(message.Chat, "Привет!");
+                    await botClient.SendTextMessageAsync(message.Chat, "Привет! Это помощник buddy. Он поможет тебе освоится в компании." + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/menu")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "/website - сайт компании" + Environment.NewLine + "/contacts - контакты" + Environment.NewLine + "/issue - оформление"
+                      + Environment.NewLine + "/information - найти информацию" + Environment.NewLine + "/how_to - как сделать" + Environment.NewLine + "/nets - социальный сети"
+                      + Environment.NewLine + "/food - еда");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/website")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "https://rencredit.ru" + Environment.NewLine + " " + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/contacts")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "/bank_phone_number - общий номер телефона банка" + Environment.NewLine + "/reception - номер телефона ресепшна" + Environment.NewLine + 
+                        "/pass_bureau - номер телефона Бюро пропусков" + Environment.NewLine + "/colleagues_contacts - где найти контакты коллеги? " + Environment.NewLine +
+                        "/salary_card - к кому обращаться по вопросам зарплатной карты? " + Environment.NewLine + " /technical_support - куда обращаться по техническим вопросам?"
+                        + Environment.NewLine + " " + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/issue")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "/temporary_pass - как оформить временный пропуск? " + Environment.NewLine + "/hospitals - как оформить больничный? " 
+                        + Environment.NewLine + "/holidays - как оформить отпуск? " + Environment.NewLine + " " + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/information")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "/bank_information - где найти информацию о банке? " + Environment.NewLine + "/education - где найти информацию об обучении, тренингах?"
+                       + Environment.NewLine + "/dms - где найти информацию про ДМС " + Environment.NewLine + "/2ndfl - где взять справку 2НДФЛ" + Environment.NewLine +
+                       "/special_offers - где найти информацию о специальных предложениях для сотрудника? " + Environment.NewLine + "/job_opening - где посмотреть открытие вакансии, на которые я могу порекомендовать знакомых?"
+                       + Environment.NewLine + " " + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
+                else if (message.Text.ToLower() == "/how_to")
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "/autosignature_corporate_mail - как создать автоподпись в корпоративной почте?" + Environment.NewLine + "/send_external_documents - как отправить внешние документы/грузы в регионы?" + Environment.NewLine +
+                        "/taxi_courier - как заказать авто/вызвать курьера" + Environment.NewLine + " /book_meeting_room - Как забронировать переговорную комнату? " + Environment.NewLine +
+                        " /phone_number_application - Как отправить заявку на присвоение номера телефон " + Environment.NewLine + "/printer_application - как отправить заявку на подключение принтера?" +
+                        "/mobile_mail_application - как отправить заявку на подключение мобильной почты" + Environment.NewLine + "/library_registration - как зарегистрироваться в корпоративной библиотеке ?"
+                        + Environment.NewLine + " " + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
                     return;
                 }
             }
