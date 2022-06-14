@@ -216,6 +216,11 @@ namespace TelegramBotRenessans
                         + Environment.NewLine + " " + Environment.NewLine + "/how_to - как сделать" + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
                     return;
                 }
+                else
+                {
+                    await botClient.SendTextMessageAsync(message.Chat, "Привет! Это помощник buddy. Он поможет тебе освоится в компании." + Environment.NewLine + "/menu - расскажет на какие вопросы отвечает бот");
+                    return;
+                }
             }
         }
 
